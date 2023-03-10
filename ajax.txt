@@ -1,0 +1,49 @@
+-> Cross-Origin Resource Sharing (CORS) is a mechanism that uses additional HTTP headers
+   to tell a browser to let a web application running at one origin (domain) 
+   have permission to access selected resources from a server at a different origin.
+   A web application makes a cross-origin HTTP request when it requests a resource 
+   that has a different origin (domain, protocol, and port) than its own origin.
+->note that ready state save state of request and status save status of request
+->that that onReadyStateChange() call every time the state change call 4 times in state 0
+  and in state 1  and in state 2  and in state 3 and in state 4
+->not if have in each element in page form and want submit this form bt ajax how get this
+  form and when get form by classic approach will get the same form how get specific form
+  get it by in submit button onclick="function(this.form)" will send form to your function
+->
+
+ajax example
+
+	var plus = document.getElementById('plus');
+        var minus = document.getElementById('minus');
+        
+        plus.addEventListener('click',function(event){
+            runAjax(event,this);
+        });
+        minus.addEventListener('click',function(event){
+            runAjax(event,this);
+        });
+
+        function runAjax(event,element){
+            event.preventDefault();
+            $.ajax({
+                type : 'get',
+                url : element.getAttribute('href'),
+                
+                success : function(res){
+                    if(res.refresh === true){
+                        document.location.reload();
+                    }
+                   window.alert('number of items in cart = '+res.success);
+                },
+                error :function(reject){
+                    var response = JSON.parse(reject.responseText); //return object of message object and errors object
+                    var errors = response.errors;  /*return errors object and this object contain objects of array 
+                                                     like email:{[]}*/
+                    $.each(errors,function(key,value){
+                        var element = key+' '+value;
+                        console.log(element);
+                    
+                    });
+                }
+            });
+        }

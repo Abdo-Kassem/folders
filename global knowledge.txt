@@ -1,0 +1,17 @@
+-> user agent is any software display web page of user
+->note that input field color if you set value set it by hexadecimal and default value
+  of this field is black
+->note that when want to push in githup displaied problems permission denied and solve
+  it by delete credential-manager by this command "git credential-manager uninstall"
+  and install it by this command git "credential-manager install" and create token 
+  in githup and use it in input field that will display when write push command
+
+->'git init' create git folder in project
+->'git pull' retrive changes that made on project that exist on github
+->'git add . ' add changes that made on project to git
+->'git commit -m 'message'' add commit of changes that made on project that added to git and must write after git add commnd
+->'git push -u origin branchName'push changes on gihub or upload project to githup if not uploaded on githup
+->'git clone url' download project from github 
+
+->note that  can not set <a> in side <a> because will make problems
+->note that name of input field can by array by this name='salary[]'

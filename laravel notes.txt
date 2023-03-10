@@ -1,0 +1,358 @@
+inv file : use to connect by database
+
+get ignore file : write in it folders that not want upload on gitHub or any remote repository note that vendor write in this file
+
+vendor : folder that contain all code and backages that install to use it in your project
+
+الملف المضغوط name composer contain name of all exist in vendor and so when want upload your project on remote repository not 
+upload vendor because exist in composer
+
+vendor folder can not modify because contain source code of laravel and packages that install it
+
+env file used to connect to database
+
+git is version controll system can handle small and large project
+
+composer is dependency manageent that install packages and update it in your laravle project
+
+note that when make composer install will discover of composer.json file and check if name of package exist in file and not make install 
+if exist name of one will install it and add description of it in composer.lock file and if composer.lock file not exist will create file 
+name is composer.lock that contain description of packages that downloaded
+
+all packages exist in vendor
+
+composer update   will update all packages 
+
+when make middleware on route and on controller class   write it on route when want middleware apply on specific method and on controller when want apply on
+more than method
+
+when run this command 'php artisan ui vue --auth' will create auth routes that contain login and register and other and create auth views
+
+note that when model implement MustVerifyEmail interface must extend Authenticatable before implement interface
+
+only() method take methods name that middleware apply to
+
+note that auth.blade.php that dispay after verification email send and this page not that display on mailtrap
+
+////where exist view that display on mailtrap?
+
+note that exist middleware VerifyCsrfToken that check if csrf input field exist in form that from type post and this field 
+applied on web file
+
+all() method is request method that return request data  as array and also exist in collection class
+
+note that Request is class and container is a class
+
+if you call input method that exist in request class without passing parameter will return associative array of value
+that exist in this request
+
+accessor when create function of accessor this function take attribute value as variable and after make your modification 
+on this variable return this variable and laravel compiler will make this modification on attribute that exist in 
+container that return when make query
+
+to refresh on mutators exist in video 90 in last 4 minut
+
+php artisan key:generate    this command will create app_key and store it in env file and this key length 32 character length
+and this key use to encrypt and decrypt the data
+
+
+note taht when run  composer require ui "^1.*" --dev  create test folder
+
+
+note that when run  php artisan ui vue --auth  create auth and home routes  and auth folder in view
+
+npm laravel use it to install frontend packages
+
+to protect your env file from access by browser  public->htaccess and write this code
+
+to open search in php storm ctr and f
+
+note that link go to get method not post
+
+note that check box when is true will send in request and when is false note send in request
+
+any model extend elquent can access 
+
+to know if query return collection'get() and all()' data from database use
+ $data->isEmpty() or $data->first() or $data->count() and do not use 
+!$dat or empty($data) because elequent return object and in poth cases is not empty
+
+note in retrive data from table by all() and get() will return collection of rows(object)
+
+note that create metod return object of type model of table
+
+note can not return bollean value but can return any data type implemnt __toString()
+
+$request->only('field1','field2','field3') return array of specified element
+
+note that $request->input('inputFieldName') not work correct with input field type file 
+and return empty of this field and to git this field from request use traditional
+operation to accesss data from object or use this method $request->hasFile('fieldName')
+return true if exist and $request->file('inputFieldName'); 
+
+note when retrive row from table and use model method like save() and delete() that 
+row retrived contain id 
+
+can delete spcific row from database by using this method User::destroy($id);
+
+note that the goal of ajax is how to make oberation without reload of the all form 
+
+note when use ajax must add meta tage in view 
+  <meta name="csrf-token" content="{{ csrf_token() }}">
+and must set this configration in ajax method 
+  headers: {
+     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+  },
+
+to work with session use build in function session()->put('key','value') to add to session
+and session()->get('key') to get from session and session()->has('key') to check if exist
+in session
+
+RedirectIfAuthenticated middleware redirecte you if authenticated mean redirecte you to
+home if authenticated and redirect you to login if not
+
+in oneToOne relationship when return data from two tables must write in with function
+foreign key of table that have foreign key and write id of another table
+in select statment  in with() or outer with()
+
+$modelObject->makeVisible(['column name']) make hidden column visible in specific method 
+that write in it this method and makeHidden(['column name']) the reverse 
+
+->note that max length of varchar = 255
+
+to hidden pivot  tabel that use it to get data set it in hidden
+
+in many to many relationship when get data and use id in condition will display exception
+because exist more than id to solve this problem write tableName.id
+
+note that sync() vs attach() in manytomany insertion  sync delete data
+ and insert new data this mean that this method make update while attach add row 
+ to pivote without deletion
+
+to define constant variable define('PAGINATION_COUNT',2); and can use it in any page'define in route file'
+
+scope mean create function in model this function contain query this query can use it in
+any function replace to write query in all function and to use it write name() declare in model like this
+forexample( public function scopeCondition();) and to call it condition()
+
+App->Http->Kernel   contain middleware exist in laravel and if create custom middleware declare in it
+
+note that mcamara prefix must not insite another prefix
+
+note that when use rout('route name') in link the will get curren url and add route to it
+
+note that $request->input(take input field name) if add to request key and data will not return by this method
+
+to make validation on password and password conformation use this rule
+confirmed|required_with:password_confirmation   wher password_confirmation name of 
+confirm input field
+
+Auth::user() get current authenticated user
+
+note that Auth::user() or Auth:: any method not get data if user not login and if register
+not get login untill login to solve this make register and login in register method
+
+note that create method return row that created it
+
+note that syncWithoutDetaching() return array or array array index 0 attached array index
+1 detached array index 2 updated
+
+note that relation in many to many get all details on related row 
+
+note when get data by relation write object->relationName and if set where condition 
+after relation or any query must write get() or first or any
+
+note that whereHas() and whereDoesntHave() return rows and in each row data of relation
+ that passed to this function
+
+note when call relation on object like $item->discount; this statement will add discount
+row of this item and if not has discount relation function will return null
+
+note that  SupCategory::where('name',$subcategoryName)->first()->items; will return items
+only while this  $subCate = SupCategory::where('name',$subcategoryName)->first();
+		$subCate->items;  will return subcategory and its items
+
+array_filter($array) delete empty array return filtered array
+
+note that when write object model and then his relation like $item->discount will add
+discount to item until if this statement inside condition
+
+$orders->currentPage() return current page in pagination
+$orders->url(1) return url of pagination page
+$orders->lastPage() return last page
+
+Laravel comes with web middleware groups that contains common middleware you may want 
+to apply to web UI routes
+
+note that when save image in path not pass public folder but pass folder that under public 
+like public/images/site  will pass images/site only
+
+=>Error encoding model [App\Models\Discount] with ID [3] to JSON: Recursion detected
+   this error because want to update row cell and pass to it object
+
+Validation if one field is filled then others are required make this
+'inputField1'=>'required_with_all:inputField2',inputField3'
+
+want say datetime after current datetime use this  ['startTime'=>'after:now']
+and if after startTime use this ['endTime'=>'after:startTime']
+
+note that livewire in stall in laravel version 7 and up
+
+can insert many row in database by insert( ) take array or arrays and return bollean value
+but create can not and insert one row and return it
+
+note that min and max mean length in string and in numeric refer to value
+
+only([]) take methods that middleware will run on them
+
+*to make multy authentication download hesto/multi-auth by this command 
+     composer require hesto/multi-auth
+*to solve this problem make this command
+    composer require laravel/helpers
+*to instal auth type run this command 
+   php artisan multi-auth:install seller -f     will create seller_auth folder of 
+   controllers and seller folder of view
+
+ 
+note that when change in redirectTo property that exist in RegisterController and 
+LoginController redirectTo not redirect to value the set to it this because registration
+of route file 
+
+when want run specific migration file use this command  
+php artisan migrate  --path=database/migrations/2020_09_12_191201_create_brands_table.php 
+
+.env file and .env.example must exist in project if not exist will throw 500 server error
+
+note that pagination result is object of two dimention array and when treat with treate 
+as array of array
+
+note that middleware auth if user not authenticate will redirect to route it name
+login and if exist two route login will take the last one and if you have multy auth
+and want redirect to your want route use middle ware that belong to your authnticte type
+for example in seller use seller middleware that create by hesto\multy auth package
+seller =>RedirectifNotSeller will redirect to login if not authenticated
+seller.guest =>RedirectifSeller will redirect to home if authenticate
+
+
+note in relation many to many when make relation in table must us 
+ ->withPivot(columns name); where not take array 
+and to add timestamps use this 
+->withTimestamps();
+
+note that can add pivot in hidden and select specific value from pivot table
+or return pivot row 
+
+note that detach(foreginKey) return integer value zero or one
+
+to make validation on array name salary use this case 
+->'salary.*'=>'rules' check array data if satisfy this rule
+->'salary'=>'rules' check if arrray it self satisfy this rule
+
+to check if array not have repeat value use laravel rule  'distinct'
+
+when set column in validation must be unique and want to except pecific value must
+add id or this row like in onlinMarketing->SellerProfileSetting->updateForm()
+ 
+note when make foreach on array of object and return data as key and value 
+key will be 0 index and 1 ,2 ,3 and so on but value will by object
+
+if have some data and want store it inside variable use fill() where fill take associative
+array
+
+to remove value from request use $request->except([]) take array of input field name
+and return array
+
+to move file from directory to anothe use rename(old path and image name and extention,new path and image name and extention)
+and return bool value
+
+to remove file use unlink(file name);
+
+note when make save object in session and when return it and want save it in database 
+by save() method not save but the update thing was apply on session
+
+note that sync([id=>[]])and syncWithoutDetaching([id=>[]])  take array of associative 
+array to insert pivot where id is id of another table and array contain key and value
+of column of pivot table  
+
+sync vs syncWithoutDetaching  sync delete data that exist in table and insert data
+that want to insert but syncWithoutDetaching add data without deleting table data
+
+to delete row from pivot use detach() and this method take id of another table that 
+belong to this relation or can take array of id  and return 0 if not exist and 1 if exist 
+and delete it
+
+
+note that elequent save() method when want save object will save it by id if not exist
+will not save it
+
+
+note that cookie($name,$value,$expir,$domain,...) create cookie object
+response($value,$code)->cookie($cookieObject) will add cookie object to response object
+when return response cookie object will store in browser and when make any request will
+send with request and to get it from request use $request->cookie();
+
+
+note that all cookie will incrypt in laravle and to except specific cookie open 
+App\Meddleware\encreptCookie and add cookies that want to not incrept to $except
+
+note that redirect()->withInput() if give it array will flush it in session and if
+not give it any thing will get request data and save this data and it will delete files
+from data give in all states
+
+note that browser when send request this request contain cookie and cookie contain cookie data and session id(session file name)
+and csrf token that exist inside (session file name) and inside session file if user login will exist authentication code and 
+user id 
+
+session()->regenerate() will create new session id(session file) and if cookie session id not exist the session id that exist
+in request cookie will change and take session that generated
+
+note that when want visit route and this rout can't visit it before login will save this route in session and to get this route
+use redirect()->intended(); will redirect you to your route if not exist intended route will redirect to current route'/'
+
+note when make login the session file will delete and create another session file to declare authentication data and will return 
+the session id and csrf token in cookie in response object
+
+to get intended url as string use this  redirect()->intended()->getTargetUrl()
+
+note that login function that exist in Auth not redirect to any thing and void
+
+session()->regenerate($destroy=false) thtis method has destroy = false by default
+this mean not destroy data that stor in this session but create new session and save
+this data in it and then delete old session
+
+
+session()->invalidate(); delete session file and the data and then create new session
+file
+
+save() elquent method return boolean
+
+
+
+{
+<div class='search'>
+            <form method='post' action="{{route('seller.search')}}">
+                <div class='form-group'>
+                    <label>search</label>
+                    <input type='search' >
+                </div>
+            </form>
+       </div>
+
+@section('style')
+<link rel='stylesheet' href="{{URL::asset('public\site\css\formStyle.css')}}">
+@endsection
+}
+
+
+<?php $count = 1; ?>
+                @foreach($seller->phones as $phone)
+                <div class="form-group">
+                    <label for="phone{{$count}}">phone{{$count}}</label>
+                    <input type="tel"  id="phone{{$count}}" name='phone[]' 
+                        placeholder="seller phone{{$count}}" value="{{$phone->phone_number}}">
+                    @error('phone.*')
+                        <span style='color:brown' >{{$message}}</span>
+                    @enderror
+                </div>
+                <?php $count++; ?>
+                @endforeach

@@ -1,0 +1,27 @@
+Skills And Tools:
+JavaScript
+Laravel
+PHP
+Software Development
+Git
+MVC
+Software Engineering
+Software
+Computer Science
+HTML5
+Information Technology (IT)
+
+Job Description:
+Build effective, testable and reusable PHP modules.
+Integration of user-facing elements developed by front-end developers
+Solve complex performance problems and architectural challenges
+
+Job Requirements:
+Strong knowledge of programming in PHP object oriented language.
+Strong knowledge of web php frameworks [such as Yii, Laravel, Symfony, etc]
+Create database models that represent and support business processes
+Experience in background roles or full software development
+Understand MVC design patterns
+Understanding access and security compliance
+Good knowledge of front-end technologies, such as JavaScript, HTML5 and CSS3
+Good knowledge of version control system tools, such as Git.

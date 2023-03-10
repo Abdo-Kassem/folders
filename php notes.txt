@@ -1,0 +1,116 @@
+- when use enctype="multypart/form-data" you must use post method
+-can not write javascript code in side html element
+-can write javascript code inside php file and can write javascript code inside php tage by using echo
+-when use header("file name"); and want send data with this link write it after ? and use after each &
+ link is belong to get method
+-testing by it i know if error exist in project or not but debugging i fix this error
+ and repair this error
+-   === compare value and type of data forexample if('2'===2) return false
+- string with variable substitution mean that variable inside string double quetation
+- empty() return true if  null or empty
+-isset() return true is set any think other than null
+-hexadecimal start with 0x
+-octal start with 0
+-rand(min,max) inclusive min and max
+-use \a\t to write at in format function
+-note that array_slice($array,$start_index,$length); is length is more than the item exist 
+note throw exception but return the exist item this funtion return subset from array
+-in array_splice function modify array must the length specified equal length of another 
+ array that contain data that modify orignal array
+- in_array method use linear search so take o(n) 
+-note that array_search() use linear search because array can not sort
+-when many cookies written the old cookie is deleted when the cookie number is less than 
+ specific number of browser
+- in cookie httpOnly mean that cookie can not read by javascript
+- domain name is website name 
+-can not use session when cookies is disable as session id store in cookies in browser
+  but can use URL encode to set session id in url
+- when write this command in cmd    ipconfig   will display ip of your pc
+-note that unset() delete cell from array and leave gap in array
+-note that L char in datetime refer to leap year if 1 is leap and if 0 not leap
+-note that \d any digit \D mean that string cntain any thing with digit or any thing 
+whithout digit important digit not alone
+and like this any reqular expresion capital character
+\w any character and any number and underscore \W else
+\s and \S
+-preg_match($pattern,$string) check regular experision pattern in string
+- /*statrt file notes*/
+     //is_file()
+    //is_dir()
+    //file_exist() return true if file or dir
+    //scandir() return files and folder in specific path
+    //fopen($path,$mode) $mode=rb for reading file or ab for writing file
+    //fwrite($stream_that_returned_from_fopen,$data) append data to data in file
+    //fread($stream_that_returned_from_fopen,$length) read specific length
+    //fgets($stream_that_returned_from_fopen) read on line
+    //fclose($stream_that_returned_from_fopen) close stream must close stream after write and after read end
+    //feof($stream) return true if arrived to end of file 
+    //unlink($file) delete file and return true if done
+/*end file notes*/
+
+-for each session id so after empty session must make session_destroy()
+
+-key difference in path object by pointer(send object name) or by reference(send object 
+ name but in function parameter have & like function fun(&$data)) will note it in this
+ example
+class A{
+    public $age = 30;
+}
+ class c{
+    public int $salary = 30000;
+ }
+  function increment(A &$x){
+    $z = new C();  //create new object from c class
+    $x = $z;   //assiment z to reference variable x 
+    $x->salary++;
+ 
+    var_dump($x);
+  }
+  $obj = new A();
+  increment($obj);  
+  var_dump($obj);  //will display object z that assignment in increment function
+
+-$folder = '/path/to/folder/';
+$images = glob($folder . '*.{jpg,jpeg,png,gif}', GLOB_BRACE);
+'*.{jpg,jpeg,png,gif}' mean get any file in this folder has specific extension 
+wher glob return array of files
+
+
+->note that 
+first example will must execute the finally if exception don or not so i have to return 
+a return that exist in finally that will return but in the second example will return 
+that exist in catch and not execute after catch and if not exist return in catch will
+execute after catch
+	try{
+            $this->test3();//throw exception
+        }catch(Exception $ex){
+            return $ex->getMessage();
+        }finally{
+            return $seller;
+        }
+
+	try{
+            $this->test3();//throw exception
+        }catch(Exception $ex){
+            return $ex->getMessage();
+        }
+            return $seller;
+        
+
+
+
+
+
+onlin marketing is e-commerce web site that support multi vendor and multi auth 
+contain three auth admin-auth,seller-auth and user-auth. admin can add and edit 
+category,subcategory and product and can specify send time of order,
+can approve on seller and delete it from website and can add,edit and delete product. 
+seller can register in website by three state create acount,create shop and 
+create wallet approach can can edit profile data,can create many shops 
+but of different category,can show orders and products of each order,
+can show,add,edit and delete product and plus and minus number of product of the product,
+can display analyze of current week where display order and his customer
+ and price or order and can see his custommers and custommer's feedback and 
+can delete customer from his customer list user must login or register to add product
+ to cart list and can serch on product and display it and add to cart list and can save 
+it in his saved items

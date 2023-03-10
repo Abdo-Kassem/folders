@@ -1,0 +1,80 @@
+-> sass is style sheet language that compile to css it allow you create variable and 
+   nested rules and function and more
+-> normalize library delete margine of body display elements in the best format and 
+   make reset of elements 
+->when make overlay on element and make hover not make hover because element is under
+  overlay to make sense to hover make z-index of element > z-index of overlay
+->note that transition add to elemnt not to element when  hover it
+->note that z-index set to element that take position absolute,fixed,relative
+-> !important add to css property to make this proprty execute if until exist before
+-> when set max-width=100% of img this mean that image width is orginal width 
+   and not scale up but can scale down
+->note that outline override margin mean that outline take space from margin
+->1% of the viewport axis. “Viewport” == browser window size == window object.
+  If the viewport is 40cm wide, 1vw == 0.4cm. mean 1vw=1% from window size
+->note that display:none hidden element and not save its position but visibility:hidden
+ hidden element but save its position
+->note that position:absolute position value set dependant on ancestor relative element
+  and if no ancestor relative element will use body
+->Compared to display: inline, the major difference is that display: inline-block
+   allows to set a width and height on the element and make margin top and bottom and
+   margin auto
+->when want make styles on tages expect specific element use this code
+  li a:hover:not(.active) where .active is class name of this element
+-> note that when make hover on element and this element contain another element 
+   and want change property of child element use this code
+   .dropdown:hover .dropdown-content
+->when element take position:absolute it out fron page flow and will be display:block
+  and display:inline-block not has any benefit and container and  will not belong to
+  parent element and parent element height will height of not absolute element
+->box-sizing:border-box when set width or height of element and add padding or margin
+  the width or height not increase
+->note that flex-wrap:wrap  the items will wrap when row full and element width will not
+  minimize but when flex-wrap:wrap items will minimize 
+->note that align item and align-content move the items in direction top and bottom when
+  when direction row and left and right when direction column and the key difference 
+  that align content تخلي العناصر متساويه من جنب والتفاوت في العرض او الطول تخليه في الناحيه التانيه 
+  align content work only when flex-wrap:wrap
+->note that position fixed and absolute take element from work flow and make them relate
+  to view this mean that element not belong to parent elemnet
+->note that when box-sizing:border-box the padding and boreder that will add will 
+  discount from element width
+->note that box-shadow:(left or right valu) (top or bottom value) blur shadow_length color;
+  and left or right and top or botton can be negative value if you want shadow top and right
+->note that text-overflow to work must set overflow:hidden and white-space:nowrap
+->when element contain another element and make margin of inside element the margin
+  not make with inside element and container but make with the element above container
+->Why border-radius is not working on element?
+  If there are contents within the div that want to set border-radius, you have to set
+  overflow: hidden because the child div's overflow can give the impression that 
+  the border-radius isn't working
+->can not set width and height of inline element
+->when want element scrol and stopn when element reach in page top like jumia search header
+  set position:sticky; and top:0; to element
+->note that overflow:hidden; and  text-overflow:ellipsis; make element content cut when
+  reach in element width and sete doted belong the element to know that exist another
+  words
+->note that can not make margin-bottom of element inside body direct
+->note that position absolute depend on nearest element that take position relative and 
+  if more than element take position absolute will move relative to the nearest element
+  taht take position relative and make layer mean that the last element will display 
+  and another not display like in slidebare images
+->note that when set top:1% mean 1% from height of the frist parent relative element 
+->note that margin:auto; not work with display:inline-block;
+->note that when set box-sizing width and height of element is element dimintion mean 
+contain any thing inside border and border
+->note that display:inline element can not make margin top or bottom and can not make
+  padding top or bottom and display:inline block can not make margin:auto
+->note that element that display:inline or inline-block can not make text-align:center
+->note that exist space between inline-block elements because inlinev and inline-block
+  elements treat like text
+->note that when element take box shadow and arround it margin box shadow not display
+  in aria that around by margin
+->when set position:fixed of element the element not belong to parent and move belongs
+  to parent
+->note that transform scale() not work with inline display
+->align-item  and justify-content use to set flex items in middle set them in parent flex
+align-item use with flex-direction:row
+justify-content use with flex-direction:column
+
+ 

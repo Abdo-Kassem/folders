@@ -1,0 +1,131 @@
+->the key difference between let and var is scope 
+	let ->die when block close like { let x=20; } can not use it outside block
+	var ->function block can use it inside function untile if outside block like
+		finction x(){ let z=1; {var x=30;} alert(x)}
+->javascript is case sensitive
+->Hyphens are not allowed in JavaScript mean - between name of variable like app-apple
+->JavaScript uses the Unicode character set.
+->If you want your code to run in older browser, you must use var.
+->After the declaration, the variable has no value (technically it is undefined).
+->let and const can not redeclear
+-> x>>number(4) equal x/(2^number)  
+-> x<<number(4) equal x*(2^number)
+-> << mean multilpication   and >> mean division
+->Any variable can be emptied, by setting the value to undefined. The type will also be undefined.
+-> in method that declare it in built in object If you access a method without the
+        () parentheses, it will return the function definition:
+->JavaScript treats primitive values as objects when executing methods and properties.
+->substring() is similar to slice().
+   The difference is that start and end values less than 0 are treated as 0
+->substr() take first position and length that want cute it
+->all string method retuen new string not change orginal string
+->Strings are immutable: Strings cannot be changed, only replaced.
+->split covert string to array and take char that split on it 
+->The search() method cannot take a second start position argument.
+->The indexOf() method cannot take powerful search values (regular expressions).
+->Back-Tics Syntax in this format string between ` ` can write variable in it ${x} allow expressions in strings:
+->Automatic replacing of expressions with real values is called string interpolation.
+->typeof NaN(not a number) is number typeof infinity is number
+->number.toString(base'32,16,8,10,2'); return format as string
+->can display array without foreach like this alert(array_name);
+->array is object
+->javascript not support associative array and if you create associative array this array
+  will redefine array to object and most array method will create wronge result
+->when create array by new array and pass on value to it and print this value will display
+  wronge result and the best use []
+->splice() add new items to array and take the start position and number of element 
+  that will delete but concate() concate arrays and add new items to array
+  and return new array
+->can use splice to delete elements from array by not add new elements that will add
+->note that when print array without looping the toString() call by default and print data
+  but when print object toString call by default but not print data print object object
+->note that sort function sort array data ascending as strings and if array contain number result
+ will be wronge to avoid this send to function compare method like this
+ function(a,b){return a-b;} ascending or function(a,b){return b-a;} descending
+->no built in method to find min and max value in array
+->when redeclare variable another time at the same scope allow with var but change the before
+->You cannot omit month. If you supply only one parameter it will be treated as milliseconds.
+->every variable take value is true
+-> JavaScript will convert the string to a number when doing the comparison and string. An empty string
+ converts to 0. A non-numeric string converts to NaN which is always false 
+->not good to use for in with array because lost order of array and use for or for of or Array.forEach()
+->when add <br> inside string and print string in alert() the <br> not convert and print <br>
+->delete() in Set take value that want delete from Set
+->delete() in Map take key want delete from Map
+->typeof null is object
+->The data type of NaN is number
+->undefined and null are equal in value all is empty but different in type:
+->JavaScript stores numbers as 64 bits floating point numbers,
+ but all bitwise operations are performed on 32 bits binary numbers so javascript convert
+ number to 32 bit signed integer and after bitwise done return to 64 bit
+->In simple words >>> always shifts a zero into the leftmost position
+ whereas >> shifts based on sign of the number 
+ >>      Signed right shift
+ >>>     Unsigned right shift
+->parseInt(data, 2) variable data and the second parameter specify this data is binary 
+ or decimal or any thing and convert it by default to decimal
+->note that throw can throw number string boolean and that send will go to exception 
+ variable like data type that send if string will string and so on
+->exception messages that desplay
+  -ReferenceError when use variable not make decleration to it
+  -RangError      when the value that assign to variable larg than variable space
+  -TypeError is thrown if you use a value that is outside the range of expected types:like
+    let num = 1;  num.toUpperCase();
+  -URIError is thrown if you use illegal characters in a URI function 
+->Variables declared Globally (outside any function) have Global Scope
+  Global variables can be accessed from anywhere in a JavaScript program
+->Global variables defined with the let keyword do not belong to the window object:
+->Global variables defined with the var keyword belong to the window objec so can call
+  it by window.variableName
+->when declare variable in function without let or var or const this variable become
+  global and can use outside function
+->not exist hosting of intialization and expression function like  let/var fun=function()n{}
+->hosting make first to function and then of variable
+->in strict mode things that not allow not allow it and in ordinary mode allow it
+->note that getElementByTageName() and querySelector() return collection of object 
+  where element is object
+->note that getElementByTageName() retuen collection until if one element return 
+  while querySelector() return collection if more than element return
+->note that use getAttribute() and setAttribute() are better than use attribute property
+  because when use the function with get src will return empty string if no src
+  but property return link of index page
+-> getAttribute() return null if attribute not add if add and value '' return empty string
+-> text is node and html element is node but text has not tage and to return elements
+   only use children property
+->note that nodeValue property return string node not element node because element node
+  is contain other node like text that contain it to get this value must get specify
+  node inside it
+->onfocus mean when focus on input filed vs onblur
+->oncontextmenu event is right click
+->onkeyup event mean after press key and leave it will make your action
+->onkeydown event mean after press key make action
+->onkeypress event mean during press key make action
+->onmousedown when down click mouse and befor left it the event trigger
+->onclick trigger when click moues left
+->onmouseover
+->onmouseout
+->note that can not run javascript file directly from chrom without call it in html file
+->note that javacript code or link must write befor body close until javascript 
+  can read html elements
+->note that toggle method add class name to element when event occure and remove
+   class name from element when event occure second
+-> varaibale that pass to function when event occure is event object and can use it to
+   get variable the event occure upon
+->to change value of root element by this way
+    document.documentElement.style.setProperty(element_name,value);
+->to access custom attribute that declare it in html element use element.dataset.variable
+-> element.offsetTop property return distance outer element 
+->element.offsetHeight property return element height
+->window or(this).innerHeight return height-view of window
+->to get width of element use this  element.clientWidth and to get height use 
+	element.clientHeigth  where value will contain acual width and padding
+
+->when set width of flex element set flex-basis because this property can change 
+ by javascript and not make conflict
+
+->note that can make post method by link by create form and this form take id 
+ and when click on this link will execute function prevent default of this link
+(event.preventDefault()) and get form and call build in javascript function submit()
+note that form not contain submite button
+
+->to reload page use this document.location.reload();

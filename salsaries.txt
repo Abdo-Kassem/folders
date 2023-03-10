@@ -1,0 +1,6 @@
+fresh 5:8,
+1 year  8:12,
+2 year  10:14,
+3 or 4 year is seniors  15:25,
+5 year or more is team leader   25:40,
+20 year is chief architect    100
